@@ -12,6 +12,10 @@ function wednesday_setup() {
   wp_enqueue_style( 'open-sans', get_template_directory_uri() . 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
 
   wp_enqueue_style( 'clean-blog', get_template_directory_uri() . '/css/clean-blog.min.css',array('bootstrap'),'3.3.7','all');
+
+
+  // Javascripts
+  wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.min.js', array ( 'jquery' ), '3.3.7', true);
 }
 
 endif;
