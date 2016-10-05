@@ -34,13 +34,16 @@
                   </div>
                   <hr>
                 <?php endwhile; ?>
-              <?php endif; ?>
                 <!-- Pager -->
                 <ul class="pager">
+                    <li class="previous">
+                        <?php echo get_previous_posts_link('&larr; Newer Posts'); ?>
+                    </li>
                     <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
+                        <?php echo get_next_posts_link('Older Posts &rarr;'); ?>
                     </li>
                 </ul>
+              <?php endif; ?>
             </div>
         </div>
     </div>
