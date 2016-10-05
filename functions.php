@@ -4,6 +4,7 @@ if ( ! function_exists( 'wednesday_setup' ) ) :
 function wednesday_setup() {
   add_theme_support('title-tag');
   add_theme_support( 'post-thumbnails' );
+  add_image_size( 'hero', 1900, 600 ); // 300 pixels wide (and unlimited height)
 
   register_nav_menus(array(
     'header-menu' => __( 'Header Menu' )
