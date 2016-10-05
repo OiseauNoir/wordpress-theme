@@ -37,9 +37,6 @@
     </div>
 </footer>
 
-<!-- Contact Form JavaScript -->
-<script src="js/contact_me.js"></script>
-
 <!-- Theme JavaScript -->
 <script src="js/clean-blog.min.js"></script>
 <?php wp_footer() ?>
