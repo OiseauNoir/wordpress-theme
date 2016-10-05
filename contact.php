@@ -11,7 +11,7 @@
                     <div class="page-heading">
                         <h1><?php the_title() ?></h1>
                         <hr class="small">
-                        <span class="subheading">TODO: ADD SUBTITLE</span>
+                        <span class="subheading"><?php the_field('subtitle') ?></span>
                     </div>
                 </div>
             </div>
