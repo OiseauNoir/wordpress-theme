@@ -20,6 +20,10 @@ function wednesday_setup() {
   wp_enqueue_script( 'jqBootstrapValidation', get_template_directory_uri() . '/js/jqBootstrapValidation.js', array ( 'bootstrap', 'jquery' ), '1.0.0', true);
   wp_enqueue_script( 'contact_me', get_template_directory_uri() . '/js/contact_me.js', array ( 'jqBootstrapValidation', 'bootstrap', 'jquery' ), '1.0.0', true);
   wp_enqueue_script( 'clean-blog', get_template_directory_uri() . '/js/clean-blog.js', array ( 'contact_me', 'bootstrap', 'jqBootstrapValidation', 'jquery' ), '1.0.0', true);
+
+  register_nav_menus(array(
+    'header-menu' => __( 'Header Menu' )
+  ));
 }
 
 endif;
