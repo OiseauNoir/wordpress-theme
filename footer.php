@@ -37,11 +37,7 @@
     </div>
 </footer>
 
-<!-- jQuery -->
-<script src="vendor/jquery/jquery.min.js"></script>
-
 <!-- Contact Form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
 <script src="js/contact_me.js"></script>
 
 <!-- Theme JavaScript -->

@@ -16,6 +16,7 @@ function wednesday_setup() {
 
   // Javascripts
   wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.min.js', array ( 'jquery' ), '3.3.7', true);
+  wp_enqueue_script( 'jqBootstrapValidation', get_template_directory_uri() . '/js/jqBootstrapValidation.js', array ( 'bootstrap' ), '1.0.0', true);
 }
 
 endif;
