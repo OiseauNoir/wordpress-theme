@@ -27,10 +27,10 @@
                               <?php the_title() ?>
                           </h2>
                           <h3 class="post-subtitle">
-                              Problems look mighty small from 150 miles up
+                              <?php echo get_the_excerpt() ?>
                           </h3>
                       </a>
-                      <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                      <p class="post-meta">Posted by <?php the_author() ?> on <?php the_time('F j, Y') ?></p>
                   </div>
                   <hr>
                 <?php endwhile; ?>
