@@ -37,8 +37,6 @@
     </div>
 </footer>
 
-<!-- Theme JavaScript -->
-<script src="js/clean-blog.min.js"></script>
 <?php wp_footer() ?>
 </body>
 
