@@ -24,7 +24,7 @@
                   <div class="post-preview">
                       <a href="<?php the_permalink() ?>">
                           <h2 class="post-title">
-                              Man must explore, and this is exploration at its greatest
+                              <?php the_title() ?>
                           </h2>
                           <h3 class="post-subtitle">
                               Problems look mighty small from 150 miles up
