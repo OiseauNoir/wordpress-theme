@@ -8,7 +8,7 @@
                 Menu <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="<?php bloginfo('url') ?>">
-              <?php bloginfo('title') ?>
+              <?php bloginfo('name') ?>
             </a>
         </div>
 
