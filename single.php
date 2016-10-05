@@ -4,7 +4,7 @@
 
       <header class="intro-header" style="background-image: url('<?php
         if (has_post_thumbnail()) {
-          the_post_thumbnail_url();
+          the_post_thumbnail_url('hero');
         } else {
           echo get_template_directory_uri() . '/img/post-bg.jpg';
         }
