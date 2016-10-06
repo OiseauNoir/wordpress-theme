@@ -35,4 +35,84 @@ function enqueue_wednesday_styles() {
 
 add_action( 'wp_enqueue_scripts', 'enqueue_wednesday_styles' );
 
+function wednesday_customize_register( $wp_customize ) {
+  $wp_customize->add_section('wednesday_footer', array(
+    'title' => __( 'Footer', 'wednesday' ),
+    'description' => __( 'Update social media links + footer copyright.' ),
+    'priority' => 160,
+    'capability' => 'edit_theme_options'
+  ));
+
+  $wp_customize->add_setting( 'footer_twitter_link', array(
+    'default' => 'https://twitter.com'
+  ) );
+
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'footer_twitter_link',
+        array(
+            'label'          => __( 'Twitter Link', 'wednesday' ),
+            'section'        => 'wednesday_footer',
+            'settings'       => 'footer_twitter_link',
+            'type'           => 'text'
+        )
+    )
+  );
+
+  $wp_customize->add_setting( 'footer_facebook_link', array(
+    'default' => 'https://facebook.com'
+  ) );
+
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'footer_facebook_link',
+        array(
+            'label'          => __( 'Facebook Link', 'wednesday' ),
+            'section'        => 'wednesday_footer',
+            'settings'       => 'footer_facebook_link',
+            'type'           => 'text'
+        )
+    )
+  );
+
+  $wp_customize->add_setting( 'footer_github_link', array(
+    'default' => 'https://github.com'
+  ) );
+
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'footer_github_link',
+        array(
+            'label'          => __( 'Github Link', 'wednesday' ),
+            'section'        => 'wednesday_footer',
+            'settings'       => 'footer_github_link',
+            'type'           => 'text'
+        )
+    )
+  );
+
+  $wp_customize->add_setting( 'footer_copyright', array(
+    'default' => 'Copyright © Your Website 2016'
+  ) );
+
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'footer_copyright',
+        array(
+            'label'          => __( 'Copyright', 'wednesday' ),
+            'section'        => 'wednesday_footer',
+            'settings'       => 'footer_copyright',
+            'type'           => 'textarea'
+        )
+    )
+  );
+
+}
+
+add_action( 'customize_register', 'wednesday_customize_register' );
+
 ?>
