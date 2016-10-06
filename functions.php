@@ -115,4 +115,21 @@ function wednesday_customize_register( $wp_customize ) {
 
 add_action( 'customize_register', 'wednesday_customize_register' );
 
+add_action( 'init', 'create_posttype' );
+function create_posttype() {
+  register_post_type( 'project',
+    array(
+      'labels' => array(
+        'name' => __( 'Projects' ),
+        'singular_name' => __( 'Project' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'projects')
+    )
+  );
+
+  add_post_type_support( 'project', 'thumbnail' );
+} 
+
 ?>
